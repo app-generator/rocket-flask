@@ -9,6 +9,32 @@
     </h1>
 </div>
 
+## Manual Build 
+
+> Install modules via `VENV`  
+
+```bash
+$ virtualenv env
+$ source env/bin/activate
+$ pip install -r requirements.txt
+```
+
+> Install Tailwind (separate terminal)
+
+```bash
+$ cd static
+$ yarn  
+$ npx tailwindcss -i ./src/input.css -o ./dist/css/output.css --watch           
+```
+
+> Start APP
+
+```
+$ flask run 
+```
+
+<br />
+
 ## Why Rocket Flask
 
 #### ***Supercharge your app instantly, launch faster, make $***
