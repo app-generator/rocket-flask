@@ -1,6 +1,6 @@
 <div align="center">
     <a href="https://github.com/app-generator/rocket-flask">
-        <img src="https://github.com/app-generator/rocket-nextjs/blob/main/src/app/favicon.ico" width="64" height="64" alt="Rocket Icon">
+        <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/272178364-cbac6d97-b2dc-4d95-bab6-891f4ee7d84d.png" width="64" height="64" alt="Rocket Icon">
     </a>
     <h1>
         <a href="https://github.com/app-generator/rocket-flask">
