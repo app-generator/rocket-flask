@@ -90,13 +90,14 @@ Visit the app in the browser `localhost:5085`.
 | --------------------------------------| --------------------------------------| --------------------------------------|
 | ✓ Flask 2.3.x                         | **Everything in Free**, plus:         | **Everything in PRO**, plus:         |
 | ✓ Best Practices, Blueprints          | ✅ Extended User Model               | ✅ **1mo Custom Development**        | 
-| ✓ Celery                              | ✅ OAuth Google, GH                  | ✅ **Dedicated Developer**           |
-| ✓ Charts                              | ✅ Multi-Language Support            | ✅ Weekly Sprints                    |
-| ✓ API via Flask-RESTX                 | ✅ Sentry Error Reporting            | ✅ Technical SPECS                   |
-| ✓ Stripe Payments                     | ✅ Private REPO Access               | ✅ Documentation                     |
-| ✓ Docker                              | ✅ **Unlimited Projects**            | ✅ **30 days Delivery Warranty**     |
-| ✓ CI/CD Flow via Render               | ✅ Lifetime Updates                  | -                                     |
-| ✓ Support via GitHub Issues           | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) | -      |
+| ✓ **TailwindCSS**/`Flowbite`          | ✅ `OAuth` Google, GitHub            | ✅ **Dedicated Developer**           |
+| ✓ Celery                              | ✅ **Stripe** Payments               | ✅ Weekly Sprints                    |
+| ✓ Charts                              | ✅ Multi-Language Support            | ✅ Technical SPECS                   |
+| ✓ API via Flask-RESTX                 | ✅ **Sentry** Error Reporting        | ✅ Documentation                     |
+| ✓ Docker                              | ✅ Private REPO Access               | ✅ **30 days Delivery Warranty**     |
+| ✓ CI/CD Flow via Render               | ✅ **Unlimited Projects**            | -                                     |
+| ✓ Support via GitHub Issues           | ✅ Lifetime Updates | -              |
+| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)           | -                                     |
 | -                                     | ✅ Deployment Assistance             | -                                     |
 | ------------------------------------| ------------------------------------| ------------------------------------|
 | -                                       | 🛒 `PRE Order`: **[$299](https://appseed.gumroad.com/l/rocket-flask)** (via GUMROAD)         | 🛒 `Order`: **[$2999](https://appseed.gumroad.com/l/rocket-flask-custom)** (via GUMROAD)              |   
