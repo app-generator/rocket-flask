@@ -9,6 +9,10 @@
     </h1>
 </div>
 
+<div align="center">
+    <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/272179438-9fe1fd32-64ca-4d2b-b00d-03f8ffc9ee09.jpg" alt="Flask Rocket - Open-source Starter styled with Tailwind and Flowbite.">
+</div>
+
 ## Manual Build 
 
 > Install modules via `VENV`  
