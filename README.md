@@ -23,7 +23,7 @@ $ source env/bin/activate
 $ pip install -r requirements.txt
 ```
 
-> Install Tailwind (separate terminal)
+> Install Tailwind (another terminal)
 
 ```bash
 $ cd static
@@ -57,7 +57,7 @@ The Django boilerplate with all you need to build your SaaS, AI tool, or any oth
  - 2 hrs for protected API routes
  - ∞ hrs overthinking...
 
- ----
+<br />
 
 ## Free vs. `PRO`
 
@@ -78,23 +78,25 @@ The Django boilerplate with all you need to build your SaaS, AI tool, or any oth
 | ------------------------------------| ------------------------------------| ------------------------------------|
 | -                                       | 🛒 `PRE Order`: **[$299](https://appseed.gumroad.com/l/rocket-flask)** (via GUMROAD)         | 🛒 `Order`: **[$2999](https://appseed.gumroad.com/l/rocket-flask-custom)** (via GUMROAD)              |   
 
+<br />
+
 ## Features
 
 **ToDO**
 
-----
+<br />
 
 ## Modules
 
 **ToDO**
 
-----
+<br />
 
 ## App Structure
 
 **ToDO**
 
-----
+<br />
 
 ## Getting Started
 
