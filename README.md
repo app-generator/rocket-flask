@@ -95,8 +95,8 @@ Visit the app in the browser `localhost:5085`.
 | ✓ API via Flask-RESTX                 | ✅ Sentry Error Reporting            | ✅ Technical SPECS                   |
 | ✓ Stripe Payments                     | ✅ Private REPO Access               | ✅ Documentation                     |
 | ✓ Docker                              | ✅ **Unlimited Projects**            | ✅ **30 days Delivery Warranty**     |
-| ✓ Support via GitHub Issues           | ✅ Lifetime Updates                  | -                                     |
-| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) | -      |
+| ✓ CI/CD Flow via Render               | ✅ Lifetime Updates                  | -                                     |
+| ✓ Support via GitHub Issues           | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) | -      |
 | -                                     | ✅ Deployment Assistance             | -                                     |
 | ------------------------------------| ------------------------------------| ------------------------------------|
 | -                                       | 🛒 `PRE Order`: **[$299](https://appseed.gumroad.com/l/rocket-flask)** (via GUMROAD)         | 🛒 `Order`: **[$2999](https://appseed.gumroad.com/l/rocket-flask-custom)** (via GUMROAD)              |   
