@@ -1,9 +1,9 @@
 <div align="center">
-    <a href="https://github.com/app-generator/rocket-flask">
+    <a href="https://rocket-flask.onrender.com">
         <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/272178364-cbac6d97-b2dc-4d95-bab6-891f4ee7d84d.png" width="64" height="64" alt="Rocket Icon">
     </a>
     <h1>
-        <a href="https://github.com/app-generator/rocket-flask">
+        <a href="https://rocket-flask.onrender.com">
             Rocket Flask
         </a>
     </h1>
@@ -15,7 +15,7 @@
 <br />
 
 <div align="center">
-    <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/272179438-9fe1fd32-64ca-4d2b-b00d-03f8ffc9ee09.jpg" alt="Flask Rocket - Open-source Starter styled with Tailwind and Flowbite.">
+    <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/272299949-6f4a8fd7-7cce-472a-9566-9519db338c7d.gif" alt="Flask Rocket - Open-source Starter styled with Tailwind and Flowbite.">
 </div>
 
 <br />
