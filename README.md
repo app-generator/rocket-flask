@@ -102,4 +102,7 @@ The Django boilerplate with all you need to build your SaaS, AI tool, or any oth
 
 ToDo
 
-----
+<br />
+
+---
+Rocket Django - Open-source starter provided by **[AppSeed](https://appseed.us)**.
