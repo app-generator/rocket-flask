@@ -9,6 +9,10 @@
     </h1>
 </div>
 
+<div align="center">
+    <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/272179438-9fe1fd32-64ca-4d2b-b00d-03f8ffc9ee09.jpg" alt="Flask Rocket - Open-source Starter styled with Tailwind and Flowbite.">
+</div>
+
 ## Manual Build 
 
 > Install modules via `VENV`  
@@ -19,7 +23,7 @@ $ source env/bin/activate
 $ pip install -r requirements.txt
 ```
 
-> Install Tailwind (separate terminal)
+> Install Tailwind (another terminal)
 
 ```bash
 $ cd static
@@ -53,7 +57,7 @@ The Django boilerplate with all you need to build your SaaS, AI tool, or any oth
  - 2 hrs for protected API routes
  - ∞ hrs overthinking...
 
- ----
+<br />
 
 ## Free vs. `PRO`
 
@@ -74,23 +78,25 @@ The Django boilerplate with all you need to build your SaaS, AI tool, or any oth
 | ------------------------------------| ------------------------------------| ------------------------------------|
 | -                                       | 🛒 `PRE Order`: **[$299](https://appseed.gumroad.com/l/rocket-flask)** (via GUMROAD)         | 🛒 `Order`: **[$2999](https://appseed.gumroad.com/l/rocket-flask-custom)** (via GUMROAD)              |   
 
+<br />
+
 ## Features
 
 **ToDO**
 
-----
+<br />
 
 ## Modules
 
 **ToDO**
 
-----
+<br />
 
 ## App Structure
 
 **ToDO**
 
-----
+<br />
 
 ## Getting Started
 
