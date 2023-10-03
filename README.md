@@ -13,6 +13,30 @@
     <img src="https://github-production-user-asset-6210df.s3.amazonaws.com/51070104/272179438-9fe1fd32-64ca-4d2b-b00d-03f8ffc9ee09.jpg" alt="Flask Rocket - Open-source Starter styled with Tailwind and Flowbite.">
 </div>
 
+<br />
+
+## Why Rocket Flask
+
+#### ***Supercharge your app instantly, launch faster, make $***
+
+Login users, process payments and send emails at lightspeed. Spend your time building your startup, not integrating APIs. **Rocket Flask** provides you with the boilerplate code you need to launch, FAST. <br />
+
+#### ***Rocket your startup in days, not weeks*** 
+
+The Django boilerplate with all you need to build your SaaS, AI tool, or any other web app. From idea to production in 5 minutes.
+
+#### **48+ hours of headaches**
+
+ - 1 hrs to setup the project 
+ - 2 hrs integrate tooling
+ - 2 hrs to handle Stripe
+ - 1 hrs for Docker
+ - 1 hr Google Oauth
+ - ∞ hrs overthinking...
+ - Quality [Support](https://appseed.us/support/) via `Email` & [Discord](https://discord.gg/fZC6hup) 
+
+<br />
+
 ## Manual Build 
 
 > Install modules via `VENV`  
@@ -39,23 +63,22 @@ $ flask run
 
 <br />
 
-## Why Rocket Flask
+## Start With Docker
 
-#### ***Supercharge your app instantly, launch faster, make $***
-Login users, process payments and send emails at lightspeed. Spend your time building your startup, not integrating APIs. Rocket provides you with the boilerplate code you need to launch, FAST. <br />
+> Download code
 
-#### ***Rocket your startup in days, not weeks*** 
-The Django boilerplate with all you need to build your SaaS, AI tool, or any other web app. From idea to production in 5 minutes.
+```bash
+$ git clone https://github.com/app-generator/rocket-flask.git
+$ cd rocket-flask
+```
 
-**18+ hours of headaches =**
- - 4 hrs to set up emails
- - 3 hrs designing a pricing section
- - 2 hrs to handle Stripe webhooks
- - 4 hrs for SEO tags
- - 1 hr applying for Google Oauth
- - 2 hrs for DNS records
- - 2 hrs for protected API routes
- - ∞ hrs overthinking...
+> Start with Docker Compose
+
+```bash
+$ docker-compose up --build 
+``` 
+
+Visit the app in the browser `localhost:5085`.
 
 <br />
 
@@ -80,29 +103,26 @@ The Django boilerplate with all you need to build your SaaS, AI tool, or any oth
 
 <br />
 
-## Features
+## **Deploy on Render**
 
-**ToDO**
+- Create a Blueprint instance
+  - Go to https://dashboard.render.com/blueprints this link.
+- Click `New Blueprint Instance` button.
+- Connect your `repo` which you want to deploy.
+- Fill the `Service Group Name` and click on the `Update Existing Resources` button.
+- Edit the Environment and [specify the PYTHON_VERSION](https://render.com/docs/python-version)
+  - Version `3.11.5` was used for **[this deployment](https://rocket-flask.onrender.com/)**
+- After that, your deployment will start automatically.
 
-<br />
-
-## Modules
-
-**ToDO**
-
-<br />
-
-## App Structure
-
-**ToDO**
+At this point, the product should be LIVE.
 
 <br />
 
-## Getting Started
+## License
 
-ToDo
+@MIT
 
 <br />
 
 ---
-Rocket Django - Open-source starter provided by **[AppSeed](https://appseed.us)**.
+[Rocket Flask](https://github.com/app-generator/rocket-flask) - Open-source starter styled with Tailwind/Flowbite actively suported by **[AppSeed](https://appseed.us)**.
