@@ -3,7 +3,7 @@
 ## [0.0.5] 2023-10-03
 ### Changes
 
-- Integarte Flowbite Dashboard
+- Integrate Flowbite Dashboard
 - Minor Codebase Changes
 
 ## [0.0.4] 2023-10-03
