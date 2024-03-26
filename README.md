@@ -9,7 +9,20 @@
     </h1>
     <p>
         <strong>TailwindCSS</strong> &bull; <strong>Flowbite</strong> &bull; <strong>API</strong> &bull; <strong>Celery</strong> &bull; <strong>Charts</strong> &bull; <strong>Docker</strong> &bull; <strong>CI/CD</strong>
-    </p>     
+    </p>   
+    <h3>
+        <a href="https://rocket-flask.onrender.com/">
+           Demo
+        </a>
+        &nbsp; &bull; &nbsp; 
+        <a href="https://appseed.us/support/">
+            Support
+        </a>
+        &nbsp; &bull; &nbsp;
+        <a href="#">
+            PRO Version (soon)
+        </a>
+    </h3>      
 </div>
 
 <br />
