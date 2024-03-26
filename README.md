@@ -131,4 +131,4 @@ At this point, the product should be LIVE.
 <br />
 
 ---
-[Rocket Flask](https://github.com/app-generator/rocket-flask) - Open-source starter styled with Tailwind/Flowbite actively suported by **[AppSeed](https://appseed.us)**.
+[Rocket Flask](https://appseed.us/product/rocket/flask/) - `Open-source Starter` styled with Tailwind/Flowbite actively supported by **[AppSeed](https://appseed.us)**.
