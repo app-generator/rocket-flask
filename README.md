@@ -33,6 +33,28 @@
 
 <br />
 
+## `Features`
+
+> `Have questions?` Contact **[Support](https://appseed.us/support/)** (Email & Discord) provided by **AppSeed**
+
+| Free Version                            | PRO (soon)             | [Custom Development](https://appseed.us/custom-development/) |  
+| --------------------------------------| --------------------------------------| --------------------------------------|
+| ✓ Flask 2.3.x                         | **Everything in Free**, plus:         | **Everything in PRO**, plus:         |
+| ✓ Best Practices, Blueprints          | ✅ Extended User Model               | ✅ **1mo Custom Development**       | 
+| ✓ **TailwindCSS**/`Flowbite`          | ✅ `OAuth` Google, GitHub            | ✅ **Team**: PM, Developer, Tester  |
+| ✓ Celery                              | ✅ **Stripe** Payments               | ✅ Weekly Sprints                   |
+| ✓ Charts                              | ✅ Multi-Language Support            | ✅ Technical SPECS                  |
+| ✓ API via Flask-RESTX                 | ✅ **Sentry** Error Reporting        | ✅ Documentation                     |
+| ✓ Docker                              | ✅ Private REPO Access               | ✅ **30 days Delivery Warranty**     |
+| ✓ CI/CD Flow via Render               | ✅ **Unlimited Projects**            | -                                     |
+| ✓ Support via GitHub Issues           | ✅ Lifetime Updates | -              |
+| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)           | -                                     |
+| -                                     | ✅ Deployment Assistance             | -                                     |
+| ------------------------------------| ------------------------------------| ------------------------------------|
+| -                                       | 🛒 `PRE Order`: **[$99](https://appseed.gumroad.com/l/rocket-flask)** (via GUMROAD)   | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
+
+<br />
+
 ## Why [Rocket Flask](https://appseed.us/product/rocket/flask/)
 
 #### ***Supercharge your app instantly, launch faster, make $***
@@ -97,28 +119,6 @@ $ docker-compose up --build
 ``` 
 
 Visit the app in the browser `localhost:5085`.
-
-<br />
-
-## Free vs. `PRO`
-
-> `Have questions?` Contact **[Support](https://appseed.us/support/)** (Email & Discord) provided by **AppSeed**
-
-| Free Version                            | PRO (soon)             | [Custom Development](https://appseed.us/custom-development/) |  
-| --------------------------------------| --------------------------------------| --------------------------------------|
-| ✓ Flask 2.3.x                         | **Everything in Free**, plus:         | **Everything in PRO**, plus:         |
-| ✓ Best Practices, Blueprints          | ✅ Extended User Model               | ✅ **1mo Custom Development**       | 
-| ✓ **TailwindCSS**/`Flowbite`          | ✅ `OAuth` Google, GitHub            | ✅ **Team**: PM, Developer, Tester  |
-| ✓ Celery                              | ✅ **Stripe** Payments               | ✅ Weekly Sprints                   |
-| ✓ Charts                              | ✅ Multi-Language Support            | ✅ Technical SPECS                  |
-| ✓ API via Flask-RESTX                 | ✅ **Sentry** Error Reporting        | ✅ Documentation                     |
-| ✓ Docker                              | ✅ Private REPO Access               | ✅ **30 days Delivery Warranty**     |
-| ✓ CI/CD Flow via Render               | ✅ **Unlimited Projects**            | -                                     |
-| ✓ Support via GitHub Issues           | ✅ Lifetime Updates | -              |
-| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)           | -                                     |
-| -                                     | ✅ Deployment Assistance             | -                                     |
-| ------------------------------------| ------------------------------------| ------------------------------------|
-| -                                       | 🛒 `PRE Order`: **[$99](https://appseed.gumroad.com/l/rocket-flask)** (via GUMROAD)   | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
 
 <br />
 
