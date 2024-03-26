@@ -5,11 +5,12 @@ Copyright (c) 2019 - present AppSeed.us
 
 import os
 
-from flask import Flask
+from flask import Flask, send_from_directory
 from flask_login import LoginManager
 from flask_sqlalchemy import SQLAlchemy
 from importlib import import_module
 from celery import Celery, Task
+from apps.config import Config
 
 db = SQLAlchemy()
 login_manager = LoginManager()
@@ -67,6 +68,10 @@ def create_app(config):
     static_prefix = '/static' if DEBUG else '/'
 
     app = Flask(__name__,static_url_path=static_prefix)
+
+    @app.route('/media/<path:filename>')
+    def media_files(filename):
+        return send_from_directory(Config.MEDIA_FOLDER, filename)
 
     app.config.from_mapping(
         CELERY=dict(

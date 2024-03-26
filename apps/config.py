@@ -30,6 +30,8 @@ class Config(object):
     CELERY_LOGS_URL           = "/tasks_logs/"
     CELERY_LOGS_DIR           = os.path.join(basedir, "tasks_logs"    )
 
+    MEDIA_FOLDER = os.path.join(basedir, "media")
+
     # try to set up a Relational DBMS
     if DB_ENGINE and DB_NAME and DB_USERNAME:
 

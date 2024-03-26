@@ -21,7 +21,13 @@ from apps.config import Config
 @blueprint.route("/")
 @blueprint.route("/index")
 def index():
-	return render_template("pages/index.html")
+	context = {}
+	context['segment'] = 'dashboard'
+	return render_template("pages/index.html", **context)
+
+@blueprint.route("/starter")
+def starter():
+	return render_template("pages/starter.html")
 
 @blueprint.route("/tables", methods=['GET', 'POST'])
 def datatables():
