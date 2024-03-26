@@ -64,26 +64,23 @@
                 <tbody class="bg-white divide-y divide-gray-200 dark:bg-gray-800 dark:divide-gray-700">
 
                   <!-- Running Task -->
-                  {% for task in  tasks %}    
-
-                  {% if task.status == "STARTED" %}
-                  <form action="#" method="post">
-                  {% else %}
-                  <form action="#" method="post">                      
-                  {% endif %}  
-
-                  
-                    
+                  <form action="{{ url_for('home_blueprint.run_script_route') }}" method="post">
                     <tr class="hover:bg-gray-100 dark:hover:bg-gray-700">
                       <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         <div class="flex px-2 py-1">
                           <div class="mx-3">
                             <i class="fa fa-file-code-o fa-2x"></i>
                           </div>
-                          <div class="flex flex-col justify-center">
-                            <h6 class="mb-0 text-sm">
-                              {{task.name}}
-                            </h6>
+                          <div class="flex flex-col">
+                            {% if tasks %}
+                              <h6 class="mb-0 text-sm">
+                                {{ tasks.task_name }}
+                              </h6>
+                            {% else %}
+                              <h6 class="mb-0 text-sm">
+                                execute_script
+                              </h6>
+                            {% endif %}
                             <p class="text-xs text-gray-600 mb-0 dark:text-gray-400">
                               Celery Task
                             </p>
@@ -92,44 +89,34 @@
                       </td>
                       <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         <p class="text-xs font-bold mb-0 ">
-                          {{ task.script }}
+                          {% if tasks %}
+                            <h6 class="mb-0 text-sm">
+                              {{ tasks.periodic_task_name|name_from_path }}
+                            </h6>
+                          {% endif %}
                         </p>
                         <div class="text-xs text-gray-600 mb-0 dark:text-gray-400" >
-                          Latest status: {{ task.status }}
+                          Latest status: {% if tasks %} {{ tasks.status }} {% endif %}
                         </div>                          
                       </td>
                       <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-
-                        {% if task.status == "STARTED" %}
+                        {% if tasks.status == "STARTED" %}
                           <span class="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded bg-yellow-500">RUNNING</span>
-                        {% elif task.status == "FAILURE" %}
+                        {% elif tasks.status == "FAILURE" %}
                           <span class="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded bg-red-600">FINISHED</span>
-                        {% elif task.status == "REVOKED" %}
+                        {% elif tasks.status == "REVOKED" %}
                         <span class="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded bg-gray-600">CANCELLED</span>
                         {% else %}
                           <span class="inline-block p-1 text-center font-semibold text-sm align-baseline leading-none rounded bg-green-500">FINISHED</span>                          
                         {% endif %}
-                        
                       </td>
                       <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         <span class="text-gray-600 text-xs font-bold">
-                          
-                          {% if task.name == 'execute_script' %}
-
-                            <select class=" w-full py-1 px-2 mb-1 border border-gray-200 rounded dark:border-gray-600 dark:bg-gray-700 dark:text-white" name="script" 
-                            {% if task.status == "STARTED" or not scripts %}
-                              disabled
-                            {% endif %}
-                            >
-                              {% for item in scripts %}
-                                <option value="{{item}}" {% if item == task.input %}selected{% endif %}>{{ item }}</option>
-                              {% endfor %}
-                            </select>
-                          
-                          {% else %}
-                            NA
-                          {% endif %}
-                          
+                          <select class=" w-full py-1 px-2 mb-1 border border-gray-200 rounded dark:border-gray-600 dark:bg-gray-700 dark:text-white" name="script" >
+                            {% for item in scripts %}
+                              <option value="{{item}}">{{ item }}</option>
+                            {% endfor %}
+                          </select>
                         </span>
                       </td>
                       <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -137,39 +124,13 @@
                           <input class="block appearance-none w-full py-1 px-2 mb-1 text-base leading-normal bg-white text-gray-800 border border-gray-200 dark:border-gray-600 rounded bg-gray-100 dark:bg-gray-700 dark:text-white" type="text" id="args" name="args">
                         </span>
                       </td>
-
-                      
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-
-                        {% if task.status == "STARTED" %}
-
-                          <button href="javascript:;" class="text-red-600 font-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                            Cancel Task
-                          </button>
-
-                        {% elif task.status == "FAILURE" or task.status == "REVOKED" %}
-                            
-                            <button href="javascript:;" 
-                                    class="dark:text-white text-gray-600 font-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                              Execute
-                            </button>
-
-                        {% else %}                               
-                          
-                            <button href="javascript:;" 
-                                    class="text-gray-600 font-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                              Execute
-                            </button>
-
-                        {% endif %}
-
+                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">                            
+                        <button class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2 me-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" type="submit">
+                          Execute
+                        </button>
                       </td>
-                  
                     </tr>
-
                   </form>
-                {% endfor %}
-
                 </tbody>
               </table>
             </div>
@@ -193,11 +154,9 @@
                 <thead class="bg-gray-100 dark:bg-gray-700">
                   <tr>
                     <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Task</th>
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Input</th>
                     <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Status</th>
                     <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Start TS</th>
                     <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">End TS</th>
-                    <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Output</th>
                     <th class="p-4 text-xs font-medium text-left text-gray-500 uppercase dark:text-gray-400">Logs</th>
                   </tr>
                 </thead>
@@ -212,25 +171,21 @@
                               {{result.id}} - {{result.task_name}}
                             </h6>
                             <p class="text-xs text-gray-600 mb-0">
-                              {{result.task_id}}
+                              {{result.periodic_task_name|name_from_path}}
                             </p>
                           </div>
                         </div>
                       </td>
 
                       <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <p class="text-sm mb-0">{{result|get_result_field("input")}}</p>
-                      </td>
-
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
                         <p class="text-sm 
-                          {% if result|get_result_field("status" == 'SUCCESS') %} text-success
-                          {% elif result|get_result_field("status" == 'FAILURE') %} text-danger
+                          {% if result.status == 'SUCCESS' %} text-success
+                          {% elif result.status == 'FAILURE' %} text-danger
                           {% else %} text-warning {% endif %}
-                          text-center mb-0"
+                           mb-0"
                         >
-                        {% if result|get_result_field("status") %}
-                          {{result|get_result_field("status")}}
+                        {% if result.status %}
+                          {{result.status}}
                         {% else %}
                           RUNNING
                         {% endif %}
@@ -238,22 +193,17 @@
                       </td>
                       
                       <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <p class="text-sm text-center mb-0">{{result.date_created|date_format}}</p>
+                        <p class="text-sm mb-0">{{result.date_created|date_format}}</p>
                       </td>
                       
                       <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <p class="text-sm text-center mb-0">{{result.date_done|date_format}}</p>
+                        <p class="text-sm mb-0">{{result.date_done|date_format}}</p>
                       </td>      
-                      
                       <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <p class="text-sm text-center mb-0">{{result|get_result_field("output")}}</p>
-                      </td>   
-                      <td class="p-4 text-base font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                        <p class="text-sm text-center mb-0">
+                        <p class="text-sm mb-0">
                           <a data-bs-toggle="modal" data-bs-target="#view-log-{{result.id}}" href="#">View LOG</a> 
                         </p>
                       </td>                                               
-
                     </tr>
 
                   {% endfor %}

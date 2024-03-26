@@ -39,38 +39,17 @@ class StatusChoices(enum.Enum):
     FAILURE = 'FAILURE'
     RUNNING = 'RUNNING'
 
+    def __str__(self):
+        return str(self.value)
+
 
 class TaskResult(db.Model):
     __tablename__ = 'TaskResult'
 
     id = db.Column(db.Integer, primary_key=True)
-    task_id = db.Column(db.String(255), unique=True, nullable=False)
-    periodic_task_name = db.Column(db.String(255), nullable=True)
     task_name = db.Column(db.String(255), nullable=True)
-    task_args = db.Column(db.Text, nullable=True)
-    task_kwargs = db.Column(db.Text, nullable=True)
+    periodic_task_name = db.Column(db.String(255), nullable=True)
     status = db.Column(db.Enum(StatusChoices), default=StatusChoices.PENDING)
-    worker = db.Column(db.String(100), nullable=True)
-    content_type = db.Column(db.String(128), nullable=False)
-    content_encoding = db.Column(db.String(64), nullable=False)
     result = db.Column(db.Text, nullable=True)
     date_created = db.Column(db.DateTime, server_default=func.now())
-    date_done = db.Column(db.DateTime, onupdate=func.now())
-    traceback = db.Column(db.Text, nullable=True)
-
-    def as_dict(self):
-        return {
-            'task_id': self.task_id,
-            'task_name': self.task_name,
-            'task_args': self.task_args,
-            'task_kwargs': self.task_kwargs,
-            'status': self.status,
-            'result': self.result,
-            'date_done': self.date_done,
-            'traceback': self.traceback,
-            'meta': self.meta,
-            'worker': self.worker
-        }
-
-    def __repr__(self):
-        return f'<TaskResult {self.id} - {self.task_id} ({self.status})>'
+    date_done = db.Column(db.DateTime, nullable=True)
