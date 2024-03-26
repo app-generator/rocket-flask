@@ -5,7 +5,7 @@ services:
     env: python
     region: frankfurt  # region should be same as your database region.
     buildCommand: "./build.sh"
-    startCommand: "gunicorn apps:app"
+    startCommand: "gunicorn run:flask_app"
     envVars:
       - key: SECRET_KEY
         generateValue: true
