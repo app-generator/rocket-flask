@@ -2,25 +2,27 @@
 """
 Copyright (c) 2019 - present AppSeed.us
 """
-
+import os
 from flask import render_template, redirect, request, url_for
 from flask_login import (
     current_user,
     login_user,
-    logout_user
+    logout_user,
+    login_required
 )
-
+from werkzeug.utils import secure_filename
 from apps import db, login_manager
 from apps.authentication import blueprint
-from apps.authentication.forms import LoginForm, CreateAccountForm
-from apps.authentication.models import Users
+from apps.authentication.forms import LoginForm, CreateAccountForm, ChangePasswordForm
+from apps.authentication.models import Users, Profile
+from apps.config import Config
 
-from apps.authentication.util import verify_pass
+from apps.authentication.util import verify_pass, hash_pass
 
 
-@blueprint.route('/')
-def route_default():
-    return redirect(url_for('authentication_blueprint.login'))
+# @blueprint.route('/')
+# def route_default():
+#     return redirect(url_for('authentication_blueprint.login'))
 
 
 # Login & Registration
@@ -86,10 +88,7 @@ def register():
         # Delete user from session
         logout_user()
         
-        return render_template('accounts/register.html',
-                               msg='User created successfully.',
-                               success=True,
-                               form=create_account_form)
+        return redirect(url_for('authentication_blueprint.login'))
 
     else:
         return render_template('accounts/register.html', form=create_account_form)
@@ -101,23 +100,96 @@ def logout():
     return redirect(url_for('authentication_blueprint.login'))
 
 
+@blueprint.route('/profile', methods=['GET', 'POST'])
+@login_required
+def profile():
+    context = {}
+    profile = Profile.find_by_user_id(current_user.id)
+    if request.method == 'POST':
+        for attribute, value in request.form.items():
+            setattr(profile, attribute, value)
+        db.session.commit()
+    
+    context['segment'] = 'profile'
+    context['profile'] = profile
+    return render_template('accounts/profile.html', **context)
+
+
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
+@blueprint.route('/profile-image/', methods=['POST'])
+@login_required
+def update_profile_image():
+    profile = Profile.find_by_user_id(current_user.id)
+
+    if 'avatar' not in request.files:
+        return redirect(url_for('authentication_blueprint.profile'))
+
+    file = request.files['avatar']
+
+    if file.filename == '':
+        return redirect(url_for('authentication_blueprint.profile'))
+
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+        file.save(os.path.join(Config.MEDIA_FOLDER, filename))
+
+        profile.avatar = filename
+        db.session.commit()
+
+        return redirect(url_for('authentication_blueprint.profile'))
+
+    return redirect(url_for('authentication_blueprint.profile'))
+
+
+
+@blueprint.route('/change-password', methods=['POST'])
+@login_required
+def change_password():
+    if request.method == 'POST':
+        current_password = request.form['current_password']
+        new_password = request.form['new_password']
+
+        user = Users.query.filter_by(username=current_user.username).first()
+
+        if user and verify_pass(current_password, user.password):
+            current_user.password = hash_pass(new_password)
+            db.session.commit()
+            return redirect(url_for('authentication_blueprint.profile'))
+        else:
+            return redirect(url_for('authentication_blueprint.profile'))
+    else:
+        return redirect(url_for('authentication_blueprint.profile'))
+
 # Errors
 
 @login_manager.unauthorized_handler
 def unauthorized_handler():
-    return render_template('pages/page-403.html'), 403
+    return redirect(url_for('authentication_blueprint.login'))
+    # return render_template('pages/page-403.html'), 403
 
 
 @blueprint.errorhandler(403)
 def access_forbidden(error):
-    return render_template('pages/page-403.html'), 403
+    return redirect(url_for('authentication_blueprint.login'))
+    # return render_template('pages/page-403.html'), 403
 
 
 @blueprint.errorhandler(404)
 def not_found_error(error):
-    return render_template('pages/page-404.html'), 404
+    return redirect(url_for('authentication_blueprint.login'))
+    # return render_template('pages/page-404.html'), 404
 
 
 @blueprint.errorhandler(500)
 def internal_error(error):
-    return render_template('pages/page-500.html'), 500
+    return redirect(url_for('authentication_blueprint.login'))
+    # return render_template('pages/page-500.html'), 500
+
+
+# custom filter
+@blueprint.app_template_filter('default_if_none')
+def default_if_none(value):
+    return value if value else ""

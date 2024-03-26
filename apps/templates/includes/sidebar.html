@@ -36,7 +36,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="/starter/"
+                        <a href="{{ url_for('home_blueprint.starter') }}"
                             class="flex items-center p-2 text-base text-gray-900 transition duration-75 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700">
                             <svg class="flex-shrink-0 w-6 h-6 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white"
                                 fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -51,7 +51,7 @@
                     {% if current_user.is_authenticated %}
 
                     <li>
-                        <a href="#"
+                        <a href="{{ url_for('authentication_blueprint.profile') }}"
                             class="flex items-center p-2 text-base text-gray-900 rounded-lg hover:bg-gray-100 group dark:text-gray-200 dark:hover:bg-gray-700 {% if 'profile' in segment %} bg-gray-100 dark:bg-gray-700 {% endif %}">
                             <svg class="w-6 h-6 text-gray-500 dark:text-white" aria-hidden="true"
                                 xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 20">
