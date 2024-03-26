@@ -1,5 +1,14 @@
 # Change Log
 
+## [1.0.0] 2024-03-26
+### Changes
+
+- NEW Features
+  - Charts
+  - API
+  - DataTables 
+  - Celery
+
 ## [0.0.5] 2023-10-03
 ### Changes
 
