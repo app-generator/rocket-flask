@@ -9,6 +9,9 @@ from apps.config import Config
 from run import celery_app
 from celery.contrib.abortable import AbortableTask
 from celery import shared_task
+from apps.home.models import TaskResult, StatusChoices
+from apps import db
+
 
 
 def get_scripts():
@@ -45,40 +48,37 @@ def write_to_log_file(logs, script_name):
     
     return log_file_path
 
-@shared_task(ignore_result=False)
-def execute_script():
-    """
-    This route executes scripts found in CELERY_SCRIPTS_DIR and generates logs stored in CELERY_LOGS_DIR
-    """
-    data = request.json
-    script = data.get("script")
-    args = data.get("args")
 
-    print(f'> EXEC [{script}] -> ({args})')
+@celery_app.task
+def run_script(script_path):
+    start_time = datetime.datetime.now()
+    process = subprocess.Popen(f"python {script_path}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    time.sleep(8)
 
-    scripts, ErrInfo = get_scripts()
-
-    if script and script in scripts:
-        # Executing related script
-        script_path = os.path.join(Config.CELERY_SCRIPTS_DIR, script)
-        process = subprocess.Popen(
-            f"python {script_path} {args}", shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        time.sleep(8)
-
-        exit_code = process.wait()
-        error = False
-        status = "STARTED"
-        if exit_code == 0:  # If script execution successful
-            logs = process.stdout.read().decode()
-            status = "SUCCESS"
-        else:
-            logs = process.stderr.read().decode()
-            error = True
-            status = "FAILURE"
-
-        log_file = write_to_log_file(logs, script)
-
-        return jsonify({"logs": logs, "input": script, "error": error, "output": "", "status": status, "log_file": log_file})
+    exit_code = process.wait()
+    error = False
+    status = "STARTED"
+    if exit_code == 0:
+        logs = process.stdout.read().decode()
+        status = "SUCCESS"
     else:
-        return jsonify({"error": "Script not found"}), 404
+        logs = process.stderr.read().decode()
+        error = True
+        status = "FAILURE"
+    
+    log_file = write_to_log_file(logs, script_path.split('/')[-1])
 
+    end_time = datetime.datetime.now()
+    execution_time = (end_time - start_time).total_seconds()
+
+    task_result = TaskResult(
+        task_name='execute_script',
+        periodic_task_name=script_path,
+        status=status,
+        date_done=end_time,
+        result=f"Execution time: {execution_time} seconds"
+    )
+    db.session.add(task_result)
+    db.session.commit()
+
+    return jsonify({"logs": logs, "input": script_path, "error": error, "output": "", "status": status, "log_file": log_file})
