@@ -44,12 +44,12 @@
 | ✓ **TailwindCSS**/`Flowbite`          | ✅ `OAuth` Google, GitHub            | ✅ **Team**: PM, Developer, Tester  |
 | ✓ Celery                              | ✅ **Stripe** Payments               | ✅ Weekly Sprints                   |
 | ✓ Charts                              | ✅ Multi-Language Support            | ✅ Technical SPECS                  |
-| ✓ API via Flask-RESTX                 | ✅ **Sentry** Error Reporting        | ✅ Documentation                     |
+| ✓ API via Flask-RESTful               | ✅ **Sentry** Error Reporting        | ✅ Documentation                     |
 | ✓ Docker                              | ✅ Private REPO Access               | ✅ **30 days Delivery Warranty**     |
 | ✓ CI/CD Flow via Render               | ✅ **Unlimited Projects**            | -                                     |
-| ✓ Support via GitHub Issues           | ✅ Lifetime Updates | -              |
-| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/)           | -                                     |
-| -                                     | ✅ Deployment Assistance             | -                                     |
+| ✓ Support via GitHub Issues           | ✅ Lifetime Updates                  | -                                      |
+| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) | -       |
+| -                                     | ✅ [Deployment Assistance](https://deploypro.dev/)   | -                      |
 | ------------------------------------| ------------------------------------| ------------------------------------|
 | -                                       | 🛒 `PRE Order`: **[$99](https://appseed.gumroad.com/l/rocket-flask)** (via GUMROAD)   | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
 
