@@ -51,7 +51,7 @@
 | -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) | -       |
 | -                                     | ✅ [Deployment Assistance](https://deploypro.dev/)   | -                      |
 | ------------------------------------| ------------------------------------| ------------------------------------|
-| -                                       | 🛒 `PRE Order`: **[$99](https://appseed.gumroad.com/l/rocket-flask)** (via GUMROAD)   | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
+| -                                       | 🛒 `PRE Order`: **[$49](https://appseed.gumroad.com/l/rocket-flask)** (via GUMROAD)   | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
 
 <br />
 
