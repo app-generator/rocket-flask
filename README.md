@@ -19,9 +19,7 @@
             Support
         </a>
         &nbsp; &bull; &nbsp;
-        <a href="#">
             PRO Version (soon)
-        </a>
     </h3>      
 </div>
 
