@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.3] 2024-04-07
+### Changes
+
+- Update DOCS (readme)
+- Mention PRO Version
+  - [Rocket Flask PRO](https://appseed.us/product/rocket-pro/flask/) - `Product Page`
+  - [Rocket Flask PRO](https://rocket-flask-pro.onrender.com/) - `LIVE Demo`
+
 ## [1.0.2] 2024-03-27
 ### Changes
 
