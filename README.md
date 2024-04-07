@@ -19,7 +19,9 @@
             Support
         </a>
         &nbsp; &bull; &nbsp;
-            PRO Version (soon)
+        <a href="https://appseed.us/product/rocket-pro/flask/">
+            PRO Version
+        </a>
     </h3>      
 </div>
 
@@ -35,21 +37,21 @@
 
 > `Have questions?` Contact **[Support](https://appseed.us/support/)** (Email & Discord) provided by **AppSeed**
 
-| Free Version                            | PRO (soon)             | [Custom Development](https://appseed.us/custom-development/) |  
+| [Free Version](https://appseed.us/product/rocket/flask/)   | [PRO Version](https://appseed.us/product/rocket-pro/flask/)     | [Custom Development](https://appseed.us/custom-development/) |  
 | --------------------------------------| --------------------------------------| --------------------------------------|
-| ✓ Flask 2.3.x                         | **Everything in Free**, plus:         | **Everything in PRO**, plus:         |
-| ✓ Best Practices, Blueprints          | ✅ Extended User Model               | ✅ **1mo Custom Development**       | 
-| ✓ **TailwindCSS**/`Flowbite`          | ✅ `OAuth` Google, GitHub            | ✅ **Team**: PM, Developer, Tester  |
-| ✓ Celery                              | ✅ **Stripe** Payments               | ✅ Weekly Sprints                   |
-| ✓ Charts                              | ✅ Multi-Language Support            | ✅ Technical SPECS                  |
-| ✓ API via Flask-RESTful               | ✅ **Sentry** Error Reporting        | ✅ Documentation                     |
-| ✓ Docker                              | ✅ Private REPO Access               | ✅ **30 days Delivery Warranty**     |
-| ✓ CI/CD Flow via Render               | ✅ **Unlimited Projects**            | -                                     |
-| ✓ Support via GitHub Issues           | ✅ Lifetime Updates                  | -                                      |
-| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) | -       |
-| -                                     | ✅ [AWS, DO, Azure Deploy Assistance](https://deploypro.dev/)       | -       |
+| ✓ Flask 2.3.x                         | **Everything in Free**, plus:                                        | **Everything in PRO**, plus:         |
+| ✓ Best Practices, Blueprints          | ✅ Extended User Model, Roles                                       | ✅ **1mo Custom Development**        | 
+| ✓ **TailwindCSS**/`Flowbite`          | ✅ **API**                                                          | ✅ **Team**: PM, Developer, Tester   |
+| ✓ Celery                              | ✅ **Charts**                                                       | ✅ Weekly Sprints                    |
+| ✓ Charts                              | ✅ **DataTables**                                                   | ✅ Technical SPECS                   |
+| ✓ API via Flask-RESTful               | ✅ **Docker**                                                       | ✅ Documentation                     |
+| ✓ Docker                              | ✅ Private REPO Access                                              | ✅ **30 days Delivery Warranty**     |
+| ✓ CI/CD Flow via Render               | ✅ **Unlimited Projects**                                           | -                                     |
+| ✓ Support via GitHub Issues           | ✅ Lifetime Updates                                                 | -                                     |
+| -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) | -                                     |
+| -                                     | ✅ [AWS, DO, Azure Deploy Assistance](https://deploypro.dev/)       | -                                     |
 | ------------------------------------| ------------------------------------| ------------------------------------|
-| -                                       | 🛒 `PRE Order`: **[$49](https://appseed.gumroad.com/l/rocket-flask)** (via GUMROAD)   | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
+| 🚀 [LIVE Demo](https://rocket-flask.onrender.com/)   | 🚀 [LIVE Demo](https://rocket-flask-pro.onrender.com/) (PRO) | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
 
 <br />
 
@@ -77,20 +79,19 @@ The Django boilerplate with all you need to build your SaaS, AI tool, or any oth
 
 ## Manual Build 
 
+> 👉 Download code
+
+```bash
+$ git clone https://github.com/app-generator/rocket-flask.git
+$ cd rocket-flask
+```
+
 > Install modules via `VENV`  
 
 ```bash
 $ virtualenv env
 $ source env/bin/activate
 $ pip install -r requirements.txt
-```
-
-> Install Tailwind (another terminal)
-
-```bash
-$ cd static
-$ yarn  
-$ npx tailwindcss -i ./src/input.css -o ./dist/css/output.css --watch           
 ```
 
 > Start APP
