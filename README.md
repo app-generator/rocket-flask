@@ -51,7 +51,7 @@
 | -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) | -                                     |
 | -                                     | ✅ [AWS, DO, Azure Deploy Assistance](https://deploypro.dev/)       | -                                     |
 | ------------------------------------| ------------------------------------| ------------------------------------|
-| 🚀 [LIVE Demo](https://rocket-flask.onrender.com/)   | 🚀 [LIVE Demo](https://rocket-flask-pro.onrender.com/) (PRO) | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
+| 🚀 [LIVE Demo](https://rocket-flask.onrender.com/)   | 🚀 [LIVE Demo](https://rocket-flask-pro.onrender.com/) (PRO) | 🛒 `Order`: **[$4,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
 
 <br />
 
@@ -86,7 +86,7 @@ $ git clone https://github.com/app-generator/rocket-flask.git
 $ cd rocket-flask
 ```
 
-> Install modules via `VENV`  
+> 👉 Install modules via `VENV`  
 
 ```bash
 $ virtualenv env
@@ -94,7 +94,17 @@ $ source env/bin/activate
 $ pip install -r requirements.txt
 ```
 
-> Start APP
+> 👉 Install **Tailwind/Flowbite** (another terminal)
+
+Tested with **Node** `v18.20.0` (use at least this version or above)
+
+```bash
+$ npm install
+$ npm run dev    # DEVELOPMENT (LIVE reload)
+$ npm run build  # PRODUCTION
+```
+
+> 👉 Start [Rocket Flask](https://appseed.us/product/rocket/flask/) Starter
 
 ```
 $ flask run 

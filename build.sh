@@ -5,3 +5,7 @@ set -o errexit
 python -m pip install --upgrade pip
 
 pip install -r requirements.txt
+
+# Install 
+npm i
+npm run build

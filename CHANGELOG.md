@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.4] 2024-04-29
+### Changes
+
+- Update DOCS (readme)
+- Added Tailwind Set Up
+  - Development `npm run dev` (with LIVE reload)
+  - Production `npm run build`
+
 ## [1.0.3] 2024-04-07
 ### Changes
 
