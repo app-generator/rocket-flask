@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.5] 2024-05-11
+### Changes
+
+- Added provisioning 
+- Update Links 
+  - Sidebar
+  - Starter Page  
+
 ## [1.0.4] 2024-04-29
 ### Changes
 

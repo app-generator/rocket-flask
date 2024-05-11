@@ -42,8 +42,8 @@
 | ✓ Flask 2.3.x                         | **Everything in Free**, plus:                                        | **Everything in PRO**, plus:         |
 | ✓ Best Practices, Blueprints          | ✅ Extended User Model, Roles                                       | ✅ **1mo Custom Development**        | 
 | ✓ **TailwindCSS**/`Flowbite`          | ✅ **API**                                                          | ✅ **Team**: PM, Developer, Tester   |
-| ✓ Celery                              | ✅ **Charts**                                                       | ✅ Weekly Sprints                    |
-| ✓ Charts                              | ✅ **DataTables**                                                   | ✅ Technical SPECS                   |
+| ✓ Celery                              | ✅ **[Charts](https://rocket-flask-pro.onrender.com/charts/)**      | ✅ Weekly Sprints                    |
+| ✓ Charts                              | ✅ **[DataTables](https://rocket-flask-pro.onrender.com/tables/)**  | ✅ Technical SPECS                   |
 | ✓ API via Flask-RESTful               | ✅ **Docker**                                                       | ✅ Documentation                     |
 | ✓ Docker                              | ✅ Private REPO Access                                              | ✅ **30 days Delivery Warranty**     |
 | ✓ CI/CD Flow via Render               | ✅ **Unlimited Projects**                                           | -                                     |
@@ -51,7 +51,7 @@
 | -                                     | ✅ **PRO Support** - [Email & Discord](https://appseed.us/support/) | -                                     |
 | -                                     | ✅ [AWS, DO, Azure Deploy Assistance](https://deploypro.dev/)       | -                                     |
 | ------------------------------------| ------------------------------------| ------------------------------------|
-| 🚀 [LIVE Demo](https://rocket-flask.onrender.com/)   | 🚀 [LIVE Demo](https://rocket-flask-pro.onrender.com/) (PRO) | 🛒 `Order`: **[$4,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
+| 🚀 [LIVE Demo](https://rocket-flask.onrender.com/)   | 🚀 [LIVE Demo](https://rocket-flask-pro.onrender.com/) (PRO) | 🛒 `Order`: **[$3,999](https://appseed.gumroad.com/l/rocket-package)** (GUMROAD) |   
 
 <br />
 
