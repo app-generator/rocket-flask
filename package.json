@@ -1,12 +1,10 @@
 {
   "scripts": {
-    "dev": "npx tailwindcss -i ./apps/static/assets/style.css -o ./apps/static/dist/main.css --watch",
-    "build": "npx tailwindcss -i ./apps/static/assets/style.css -o ./apps/static/dist/main.css"
-  },
-  "devDependencies": {
-    "tailwindcss": "^3.4.3"
+    "dev": "npx @tailwindcss/cli -i ./apps/static/assets/style.css -o ./apps/static/dist/main.css --watch",
+    "build": "npx @tailwindcss/cli -i ./apps/static/assets/style.css -o ./apps/static/dist/main.css"
   },
   "dependencies": {
-    "flowbite": "^2.3.0"
+    "@tailwindcss/cli": "^4.0.0",
+    "tailwindcss": "^4.0.0"
   }
 }
