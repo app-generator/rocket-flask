@@ -1,5 +1,13 @@
 # Change Log
 
+## [1.0.7] 2025-03-11
+### Changes
+
+- Update Product Links to [App-Generator](https://app-generator.dev/) Service   
+- [Flask Rocket](https://app-generator.dev/product/rocket/flask/) - roduct page
+- [Flask Rocket - Documentation](https://app-generator.dev/docs/products/flask/rocket/index.html)
+- [Flask Rocket - LIVE Demo](https://rocket-flask.onrender.com/)
+
 ## [1.0.6] 2024-05-18
 ### Changes
 
@@ -41,7 +49,7 @@
 
 - Update DOCS (readme)
 - Update Links
-  - [Rocket Flask](https://appseed.us/product/rocket/flask/) - `Product page`
+  - [Rocket Flask](https://app-generator.dev/product/rocket/flask/) - `Product page`
   - [Rocket Django](https://appseed.us/product/rocket/django/) - `Product page`
   - [Rocket Django PRO](https://appseed.us/product/rocket-pro/django/) - `PRO Version`
   - [Rocket eCommerce](https://appseed.us/product/rocket-ecommerce/django/) - `Premium Starter`
